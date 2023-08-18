@@ -1,0 +1,375 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap');
+
+:root{
+    /* variáveis das fontes utilizadas no projeto: 
+        font-padrao -> para textos em geral; 
+        font-destaque -> para títulos de primeiro nível (h1); 
+        font-especial -> para botões e links; 
+        font-thinkbox -> para representar o projeto. */
+    --font-padrao: 'Roboto', sans-serif;
+    --font-destaque: 'Lobster', cursive;
+    --font-especial: 'Poppins', sans-serif;
+    --font-thinkbox: 'Dune Rise', sans-serif;
+
+    /* variáveis para representar as cores do projeto
+    com base na paleta de cores, que está no figma: os números são em ordem crescente das cores da esquerda para a direita, de cima para baixo, conforme a imagem da paleta de cores que está no figma. */
+    --cor01: #7F3E98;
+    --cor02: #AC81BC;
+    --cor03: #CDB4D7;
+    --cor04: #F1F1F1;
+    --cor05: #CC6FAD;
+}
+
+@font-face {
+    font-family: 'Dune Rise';
+    src: url(../fontes/Dune_Rise.otf) format('opentype');
+    font-weight: normal;
+}
+
+@media (min-width:320px) {
+    body{
+        font-family: var(--font-padrao);
+        font-size: 0.9rem;
+        text-align: justify;
+        background-color: var(--cor04);
+    }
+
+    /*BANNER "TERAPIA DE REPROCESSAMENTO GENERATIVO"*/
+    .banner-img{
+        width: 100%;
+        display: flex;
+    }
+
+    /*AQUI COMEÇA A HOME DO SITE*/
+    main{
+        padding-bottom: 60px;
+    }
+    h1{
+        font-family: var(--font-destaque);
+        color: var(--cor01);
+        font-size: 2rem;
+        margin: 0 30px;
+    }
+    article {
+        background-color: #fff;
+        background-image: url(../imagens/back-main.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        border-radius: 0 0 40% 35%;
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.6);
+    }
+    article p{
+        margin: 15px 30px;
+    }
+
+    /*AQUI FICA O BOTÃO "SAIBA MAIS"*/
+    .btn-saiba-mais{
+        width: 116px;
+        height: 32px;
+        margin: 20px 102px;
+        padding: 10px;
+        z-index: 1;
+        border: 1px solid var(--cor01);
+        border-radius: 20px;
+        background-color: var(--cor01);
+        box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .btn-saiba-mais a{
+        color: var(--cor04);
+        text-decoration: none;
+    }
+    /*DEPOIMENTOS DOS PACIENTES DA NOSSA CLIENTE*/
+    .depoimentos{
+        height: 450px;
+        background-color: var(--cor01);
+    }
+    h2{
+        font-family: var(--font-destaque);
+        font-size: 2rem;
+        text-align: center;
+        text-decoration: underline;
+        color: var(--cor04);
+        padding: 45px 0;
+    }
+    /*SEÇÃO "AGENDAR" DA HOME DO SITE*/
+    .img-motivação{
+        width: 270px;
+        margin: auto 25px;
+    }
+    .textao-do-agendar p{
+        margin: 20px 30px;
+    }
+    /*INFORMAÇÕES PARA USUÁRIOS COM DÚVIDAS*/
+    aside{
+        margin: 50px auto;
+        background-color: var(--cor03);
+        border-top: 2px solid var(--cor02);
+        border-bottom: 2px solid var(--cor02);
+    }
+    h3{
+        font-family: var(--font-especial);
+        margin: 10px 40px;
+        color: var(--cor02);
+        text-align: center;
+    }
+    aside p{
+        font-size: 12px;
+        text-align: justify;
+        margin: auto 30px;
+        padding: 9px 0;
+    }
+    /*BOTÃO PARA O WHATSAPP DA CLIENTE - SEÇÃO DOS USUÁRIOS COM DÚVIDAS*/
+    aside a{
+        font-weight: bold;
+        color: var(--cor05);
+        text-decoration: none;
+    }
+    .zap-link{
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        width: 300px;
+        margin: 5px 10px 5px 0;
+        text-decoration: none;
+    }
+    .zap-link p{
+        width: 140px;
+        margin: auto 0 auto 30px;
+    }
+    .contato-terapeuta{
+        width: 20px;
+        height: 20px;
+        margin:0 3px;
+    }
+    
+
+    /*BOTÃO "AGENDAR" DA HOME DO SITE*/
+    .agendar-index{
+        width: 120px;
+        height: 32px;
+        margin: 20px 100px;
+        border: 1px solid var(--cor01);
+        border-radius: 20px;
+        background-color: var(--cor01);
+        z-index: 1;
+        box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .agendar-index a{
+        color: var(--cor04);
+        text-decoration: none;
+    }
+}
+
+@media (min-width:480px) {
+    h1{
+        margin: 0 60px;
+    }
+    article{
+        padding: 20px;
+    }
+    article p{
+        margin: 20px 60px;
+    }
+    .btn-saiba-mais{
+        width: 150px;
+        margin: 25px 145px;
+    }
+
+    .depoimentos{
+        height: 560px;
+    }
+    .textao-do-agendar p{
+        margin: 15px 60px;   
+    }
+    aside p{
+        margin: 10px 60px;
+    }
+    .zap-link p{
+        width: 140px;
+        margin: auto 0 auto 60px;
+    }
+
+    .img-motivação{
+        width: 300px;
+        margin: auto 90px;
+    }
+
+    .agendar-index{
+        width: 120px;
+        margin: 30px 180px 50px;
+    }
+}
+
+@media (min-width:600px) {
+    h1{
+        margin: 0 70px;
+    }
+    article{
+        padding: 20px;
+    }
+
+    .btn-saiba-mais{
+        width: 150px;
+        margin: 25px 195px;
+    }
+    
+    article p, aside p, .textao-do-agendar p{
+        margin: 20px 70px;
+    }
+    .zap-link p{
+        width: 140px;
+        margin: auto 0 auto 70px;
+    }
+
+    .img-motivação{
+        width: 300px;
+        margin: 30px 150px;
+    }
+    .agendar-index{
+        width: 120px;
+        margin: 30px 250px 50px;
+    }
+}
+
+@media (min-width:801px) {
+    main{
+        padding: 0;
+        margin: 0;
+
+    }
+    h1{
+        margin: auto 100px;
+    }
+    article{
+        padding: 0 0 70px 0;
+        border-radius: 0;
+        border: none;
+        background-image: url(../imagens/backimg-index-main.png);
+        background-size: cover;
+    }
+    article p{
+        margin: 40px 250px 10px 50px;
+    }
+    .btn-saiba-mais{
+        margin: 30px 200px;
+    }
+    .depoimentos{
+        height: 600px;
+    }
+    .agendar{
+        margin:70px 0px;
+        display: grid;
+        grid-template-columns: 320px 500px;
+        grid-template-rows: 180px 800px 50px;
+        grid-template-areas: "img aside"
+                             "img info"
+                             "btn btn"
+    }
+    .img-motivação{
+        width: 260px;
+        height: 500px;
+        margin: 0 20px;
+        grid-area: img;
+    }
+    .textao-do-agendar{
+        margin: 20px 30px 30px 0;
+        grid-area: info;
+    }
+    .textao-do-agendar p{
+        margin: 15px 20px 0 0;
+        font-size: 0.9rem;
+    }
+    aside{
+        background-color: var(--cor04);
+        border: 1px solid var(--cor01);
+        margin: 0;
+        width: 360px;
+        height: 180px;
+        grid-area: aside;    
+    }
+    h3{
+        margin: 5px 0;
+        font-size: 0.9rem;
+    }
+    aside p, .zap-link p{
+        margin: 0 15px;
+    }
+    .agendar-index{
+        margin: 20px auto 0;
+        grid-area: btn;
+    }
+}
+
+@media (min-width:1025px) {
+    article{
+        padding: 40px 0 80px;
+    }
+    h1{
+        margin: auto 130px 50px;
+    }
+    article p{
+        margin: 20px 407px auto 100px;
+    }
+    .btn-saiba-mais{
+        margin: 40px 220px;
+    }
+    .agendar{
+        grid-template-columns: 435px 590px;
+        grid-template-rows: 180px 695px 70px;
+    }
+    .img-motivação{
+        width: 320px;
+        height: auto;
+        margin: 0 auto;
+    }
+    .textao-do-agendar{
+        margin: 15px 15px 0 0;
+    }
+    .agendar-index{
+        margin: 25px 435px 0;
+        padding: 7px 14px;
+    }   
+}
+
+@media (min-width:1251px) {
+    body{
+        font-size: 1rem;
+    }
+    article{
+        padding: 0 0 80px;
+    }
+    h1{
+        margin: auto 130px 50px;
+        font-size: 2.6rem;
+    }
+    article p{
+        margin: 40px 600px auto 80px;
+    }
+    .btn-saiba-mais{
+        margin: 40px 280px;
+    }
+    .agendar{
+        grid-template-columns: 520px 720px;
+        grid-template-rows: 180px 600px 70px;
+    }
+    .img-motivação{
+        width: 400px;
+        height: auto;
+        margin: 0 auto;
+    }
+    .textao-do-agendar{
+        margin: 15px 30px 0 0;
+    }
+    .agendar-index{
+        margin: 25px 540px 0;
+        padding: 7px 14px;
+    }
+}
